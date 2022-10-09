@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Arial";
+  margin: 0;
+  #42454c
+}
+
+/*----------- Main Menu ------------*/
+
+.main-menu{
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+}
+
+.main-menu ul{
+  margin: 0;
+  padding: 0 1%;
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-basis: 100%;
+}
+
+.main-menu ul li{
+  display: flex;
+  padding: .5% 1%;
+  cursor: pointer;
+  align-items: flex-start
+}
+
+.main-menu>ul>li:hover{
+  background: #bababa;
+}
+
+.main-menu ul li a{
+  justify-self: center;
+  display: block;
+  width: 100%;
+}
+
+.main-menu ul li, .main-menu ul li a{
+  color: #42454c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .75rem;
+  display: flex;
+}
+
+.active{
+  font-weight: bold;
+}
+
+.main-menu>ul>li>ul{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 0;
+  background: #bababa;
+}
+
+.main-menu>ul>li:hover>ul{
+  display: inline-flex;
+}
+
+.main-menu>ul>li>ul>li{
+  padding: 2em 2.5em;
+  flex-wrap: wrap;
+}
+
+.main-menu>ul>li>ul li:hover{
+  background: rgba(255, 255, 255, .5);
+}
+
+.main-menu>ul>li>ul>li ul{
+  display: block;
+  padding-left: .5em;
+}
+
+.main-menu>ul>li>ul>li li{
+  display: block;
+}
+
+.main-menu>ul>li>ul>li li a{
+  display: block;
+  padding: 1em 1em 1em 2em;
+}
+
+#main-menu-button{
+  display: none;
+}
+
+.button_menu{
+  justify-self: center;
+  flex-basis: 100%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  color: #42454c;
+  height: 50px;
+}
+
+.button_menu img{
+  width: auto;
+  height: 50px;
+}
+
+@media (max-width: 1050px) {
+
+  #main-menu-button{
+    display: flex;
+  }
+
+  #main-menu ul{
+    flex-wrap: wrap;
+  }
+
+  .main-menu>ul {
+    background: #bababa ;
+    padding-right: 15%; /*----------space for touch scrolling ----------*/
+  }
+
+  .main-menu ul li{
+    padding: 2% 1.5%;
+    width: 100%;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  .main-menu ul li:first-child{
+    border-top: none;
+  }
+
+  .main-menu>ul>li:hover{
+    background: rgba(255, 255, 255, .5);
+  }
+
+  .main-menu>ul>li>ul{
+    display: flex;
+    position: relative;
+    background: none;
+  }
+
+  .main-menu>ul>li>ul>li {
+    padding: .5em .5em;
+  }
+}
