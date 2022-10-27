@@ -11,8 +11,10 @@ window.addEventListener("load", function(event) {
 
 window.addEventListener("resize", function(event) {
     window.setTimeout(function() {
-      document_width = document.body.clientWidth;
-      widthCheck();
+      if (document_width != document.body.clientWidth){
+        document_width = document.body.clientWidth;
+        widthCheck();
+      }
     }, 500);
 }, true);
 
